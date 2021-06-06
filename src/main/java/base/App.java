@@ -1,4 +1,7 @@
 package base;
+
+import java.util.Scanner;
+
 /*
  *  UCF COP3330 Summer 2021 Assignment 1 Solution
  *  Copyright 2021 Scott Matson
@@ -33,4 +36,16 @@ Challenges
 
  */
 public class App {
+
+    private static final int DrivingAge = 16;
+
+    public static void main(String[] args) {
+        Scanner ui = new Scanner(System.in);
+
+        System.out.print("What is your age? ");
+        int age = ui.nextInt();
+
+        String legal = (age > DrivingAge) ? "old enough" : "not old enough";
+        System.out.println("You are " + legal + " to legally drive.");
+    }
 }
